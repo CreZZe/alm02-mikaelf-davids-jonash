@@ -17,10 +17,13 @@ import java.io.Serializable;
 @SessionScoped
 public class RandomFactor implements Serializable {
 
+    private int randomNumber;
+    
     /**
      * Creates a new instance of RandomFactor
      */
     public RandomFactor() {
+        randomNumber = getRandomNumber();
     }
     
     public int getRandomNumber() {

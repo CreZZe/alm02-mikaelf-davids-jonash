@@ -17,6 +17,8 @@ import java.io.Serializable;
 @SessionScoped
 public class Person implements Serializable {
 
+    private RandomFactor r = new RandomFactor();
+    
     private String fullName;
     private String ethnicity;
     private String nationality;
@@ -34,8 +36,10 @@ public class Person implements Serializable {
         this.birthDate = birthDate;
         this.gender = gender;
     }
-    
-    
+
+    public RandomFactor getR() {
+        return r;
+    }
 
     public String getFullName() {
         return fullName;
