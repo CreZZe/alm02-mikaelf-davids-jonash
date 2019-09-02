@@ -39,8 +39,12 @@ public class Translator implements Serializable {
         fortuneList.put("6-10kvinna21-50", "Your home will be filled with peace and harmony.");
         fortuneList.put("6-10kvinna51-100", "Your smile lights up someone else's day.");
     }
+
+    public String getFortune() {
+        return fortune;
+    }
     
-    private String getFortune(String key) {
+    private String getFortuneWithKey(String key) {
         return fortuneList.get(key);
     }
     
@@ -51,7 +55,7 @@ public class Translator implements Serializable {
         key += gender(person.getGender());
         key += age(person.getBirthDate());
         
-        fortune = getFortune(key);
+        fortune = getFortuneWithKey(key);
     }
     
     public String randomNumber(int rand) {

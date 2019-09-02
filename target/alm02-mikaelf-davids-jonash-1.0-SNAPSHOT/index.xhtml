@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Fortune Teller</title>
     </h:head>
@@ -19,7 +20,7 @@
                         <h:inputText 
                             id="name"
                             styleClass="inputContent"
-                            value="#{webshopController.fullName}"
+                            value="#{person.fullName}"
                             required="true"
                             requiredMessage="Please enter your name"
                             >
@@ -30,7 +31,7 @@
                         <h:outputLabel styleClass="headline">Nationality</h:outputLabel>
                         <h:inputText 
                             id="nationality"
-                            value="#{webshopController.nationality}"
+                            value="#{person.nationality}"
                             styleClass="inputContent"
                             required="true"
                             requiredMessage="Please enter password"
@@ -44,7 +45,7 @@
                         <h:inputText 
                             id="ethnicity"
                             styleClass="inputContent"
-                            value="#{webshopController.loginUsername}"
+                            value="#{person.ethnicity}"
                             required="true"
                             requiredMessage="Please enter ethnicity"
                             >
@@ -52,11 +53,11 @@
                         </h:inputText>
                         <h:message for="ethnicity" /> <!-- för validate -->
 
-                        <h:outputLabel styleClass="headline">Birthday</h:outputLabel>
+                        <h:outputLabel styleClass="headline">Age</h:outputLabel>
                         <h:inputText 
                             id="birthday"
                             styleClass="inputContent"
-                            value="#{webshopController.birthday}"
+                            value="#{person.birthDate}"
                             required="true"
                             requiredMessage="Please enter birthday"
 
@@ -68,7 +69,7 @@
                         <h:outputLabel styleClass="headlineCentered">Gender</h:outputLabel>
 
                         <div id="optionsContainer">
-                            <h:selectOneRadio value="#{user.favColor1}">
+                            <h:selectOneRadio value="#{person.gender}">
                                 <f:selectItem itemValue="Man" itemLabel="Man" />
                                 <f:selectItem itemValue="Woman" itemLabel="Woman" />
                                 <f:selectItem itemValue="Other" itemLabel="Other" />
@@ -79,9 +80,9 @@
                             styleClass="buttonContent"
                             id="f1" 
                             value="Tell My Fortune"
-                            action="#{webshopController.loginHandler()}"
+                            action="#{translator.calculateFortune(person)}"
                             />
-
+                        <h:outputLabel value="#{translator.fortune}"></h:outputLabel>
                     </div>
                 </h:form>
 
