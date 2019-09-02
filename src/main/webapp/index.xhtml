@@ -4,100 +4,91 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Fortune Teller</title>
     </h:head>
     <h:body>
         <h:outputStylesheet library="css" name="styling.css"  />
         <div id="d1">
-        <f:view>
+            <f:view>
                 <h:form id="f1">
                     <div id="d2">
-                        <h:head>Fortune Teller</h:head>
                         
+                        <h:outputLabel styleClass="fortuneHeader">Full name</h:outputLabel>
+
                         <h:outputLabel styleClass="headline">Full name</h:outputLabel>
                         <h:inputText 
-                            id="loginUsername"
+                            id="name"
                             styleClass="inputContent"
-                            value="#{person.fullName}"
+                            value="#{webshopController.fullName}"
                             required="true"
-                            requiredMessage="Please enter username"
-                        >
-                        
+                            requiredMessage="Please enter your name"
+                            >
+
                         </h:inputText>
-                        <h:message for="loginUsername" /> <!-- för validate -->
-                        
+                        <h:message for="name" /> <!-- för validate -->
+
                         <h:outputLabel styleClass="headline">Nationality</h:outputLabel>
-                        <h:inputSecret 
-                            id="loginPassword"
-                            value="#{person.nationality}"
+                        <h:inputText 
+                            id="nationality"
+                            value="#{webshopController.nationality}"
                             styleClass="inputContent"
-                            required="#{not empty usernameComponent.value}"
+                            required="true"
                             requiredMessage="Please enter password"
-                            
-                        >
-                           <!-- <f:validator validatorId="loginValidator" /> -->
-                            <f:attribute name="usernameValue" value="#{usernameComponent.value}" />
-                        </h:inputSecret>
-                        <h:message for="loginPassword" /> <!-- för validate -->
-                        
-                        
+
+                            >
+                        </h:inputText>
+                        <h:message for="nationality" /> <!-- för validate -->
+
+
                         <h:outputLabel styleClass="headline">Ethnicity</h:outputLabel>
                         <h:inputText 
-                            id="fortuneEthnicity"
+                            id="ethnicity"
                             styleClass="inputContent"
-                            value="#{person.ethnicity}"
+                            value="#{webshopController.loginUsername}"
                             required="true"
-                            requiredMessage="Please enter username"
-                            
-                        >
-                        
+                            requiredMessage="Please enter ethnicity"
+                            >
+
                         </h:inputText>
-                        <h:message for="fortuneEthnicity" /> <!-- för validate -->
-                        
+                        <h:message for="ethnicity" /> <!-- för validate -->
+
                         <h:outputLabel styleClass="headline">Birthday</h:outputLabel>
                         <h:inputText 
-                            id="fortuneBirthday"
+                            id="birthday"
                             styleClass="inputContent"
-                            value="#{person.birthDate}"
+                            value="#{webshopController.birthday}"
                             required="true"
-                            requiredMessage="Please enter username"
-                            
-                        >
-                        
+                            requiredMessage="Please enter birthday"
+
+                            >
+
                         </h:inputText>
-                        <h:message for="fortuneBirthday" /> <!-- för validate -->
-                        
+                        <h:message for="birthday" /> <!-- för validate -->
+
+                        <h:outputLabel styleClass="headlineCentered">Gender</h:outputLabel>
+
+                        <div id="optionsContainer">
+                            <h:selectOneRadio value="#{user.favColor1}">
+                                <f:selectItem itemValue="Man" itemLabel="Man" />
+                                <f:selectItem itemValue="Woman" itemLabel="Woman" />
+                                <f:selectItem itemValue="Other" itemLabel="Other" />
+                            </h:selectOneRadio>
+                        </div>
 
                         <h:commandButton
                             styleClass="buttonContent"
                             id="f1" 
-                            value="Tell My Fortunate"
+                            value="Tell My Fortune"
                             action="#{webshopController.loginHandler()}"
-                        />
-                        <div id="d3">
-                            <h:commandLink 
-                                styleClass="textButton"
-                                id="f2" 
-                                value="Forgot password?" 
-                                immediate="true"
                             />
-                            <h:outputLabel 
-                                styleClass="textBullet">•</h:outputLabel>
-                            <h:commandLink 
-                                styleClass="textButton"
-                                id="f3"
-                                value="Create an account"
-                                action="createAccount"
-                                immediate="true"
-                            />
-                        </div>
+
                     </div>
                 </h:form>
-                
-           
-           
-        </f:view>
-            
+
+
+
+            </f:view>
+
         </div>
     </h:body>
 </html>
