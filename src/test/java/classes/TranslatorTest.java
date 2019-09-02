@@ -1,5 +1,6 @@
 package classes;
 
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,6 +15,7 @@ import static org.junit.Assert.*;
 public class TranslatorTest {
     
     Translator trans = new Translator();
+    Random random = new Random();
     
     public TranslatorTest() {
     }
@@ -66,10 +68,12 @@ public class TranslatorTest {
      */
     @Test
     public void testRandomNumber() {
-        assertEquals(trans.randomNumber(2), "1-5");
-        assertEquals(trans.randomNumber(4), "1-5");
-        assertEquals(trans.randomNumber(6), "6-10");
-        assertEquals(trans.randomNumber(8), "6-10");
+        for (int i = 1; i <= 10; i++) {
+            if (i >= 1 && i <= 5)
+                assertEquals(trans.randomNumber(i), "1-5");
+            else
+                assertEquals(trans.randomNumber(i), "6-10");
+        }
     }
 
     /**
