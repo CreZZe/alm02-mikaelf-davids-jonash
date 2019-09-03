@@ -16,6 +16,7 @@ public class TranslatorTest {
     
     Translator trans = new Translator();
     Random random = new Random();
+    Person p1 = new Person("Mikael Fredriksson", "Asd", "Asd", "21", "Man");
     
     public TranslatorTest() {
     }
@@ -30,6 +31,7 @@ public class TranslatorTest {
     
     @Before
     public void setUp() {
+        trans.calculateFortune(p1);
     }
     
     @After
@@ -41,13 +43,11 @@ public class TranslatorTest {
      */
     @Test
     public void testGetFortune() {
-        /*System.out.println("getFortune");
-        Translator instance = new Translator();
-        String expResult = "";
-        String result = instance.getFortune();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");*/
+        System.out.println(p1.getR().getRandomNumber());
+        if (p1.getR().getRandomNumber() <= 5)
+            assertEquals(trans.getFortune(), "Your home will be filled with peace and harmony.");
+        else
+            assertEquals(trans.getFortune(), "Focus on your health and well-being now. It won't wait.");
     }
 
     /**
@@ -55,12 +55,9 @@ public class TranslatorTest {
      */
     @Test
     public void testCalculateFortune() {
-        /*System.out.println("calculateFortune");
-        Person person = null;
-        Translator instance = new Translator();
-        instance.calculateFortune(person);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");*/
+        
+        assertTrue(trans.calculateFortune(p1));
+        
     }
 
     /**
@@ -81,14 +78,9 @@ public class TranslatorTest {
      */
     @Test
     public void testGender() {
-        /*System.out.println("gender");
-        String gender = "";
-        Translator instance = new Translator();
-        String expResult = "";
-        String result = instance.gender(gender);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");*/
+        assertEquals(trans.gender("Man"), "man");
+        assertEquals(trans.gender("Woman"), "kvinna");
+        assertEquals(trans.gender("Other"), "other");
     }
 
     /**
@@ -96,14 +88,20 @@ public class TranslatorTest {
      */
     @Test
     public void testAge() {
-        /*System.out.println("age");
-        String ageString = "";
-        Translator instance = new Translator();
-        String expResult = "";
-        String result = instance.age(ageString);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");*/
+        int rand;
+        for (int i = 0; i < 100_000; i++) {
+            rand = random.nextInt();
+            
+            if (rand >= 0 && rand <= 20) {
+                assertEquals(trans.age(String.valueOf(rand)), "0-20");
+            }
+            else if (rand >= 21 && rand <= 50) {
+                assertEquals(trans.age(String.valueOf(rand)), "21-50");
+            }
+            else {
+                assertEquals(trans.age(String.valueOf(rand)), "51->");
+            }
+        }
     }
     
 }

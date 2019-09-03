@@ -48,7 +48,7 @@ public class Translator implements Serializable {
         return fortuneList.get(key);
     }
     
-    public void calculateFortune(Person person) {
+    public boolean calculateFortune(Person person) {
         String key;
         
         key = randomNumber(person.getR().getRandomNumber());
@@ -56,6 +56,8 @@ public class Translator implements Serializable {
         key += age(person.getBirthDate());
         
         fortune = getFortuneWithKey(key);
+        
+        return fortune != null;
     }
     
     public String randomNumber(int rand) {
