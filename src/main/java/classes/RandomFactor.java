@@ -23,11 +23,17 @@ public class RandomFactor implements Serializable {
      * Creates a new instance of RandomFactor
      */
     public RandomFactor() {
-        randomNumber = getRandomNumber();
+        randomNumber = createRandomNumber();
     }
     
-    public int getRandomNumber() {
+    public int createRandomNumber() {
         return (int) (Math.random() * 10) + 1;
     }
+
+    public int getRandomNumber() {
+        return randomNumber;
+    }
+    
+    
     
 }

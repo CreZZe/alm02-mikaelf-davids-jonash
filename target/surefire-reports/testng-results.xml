@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1125" started-at="2019-09-03T11:12:59Z" finished-at="2019-09-03T11:13:00Z">
+  <suite name="Surefire suite" duration-ms="316" started-at="2019-09-04T09:40:58Z" finished-at="2019-09-04T09:40:58Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1125" started-at="2019-09-03T11:12:59Z" finished-at="2019-09-03T11:13:00Z">
+    <test name="Surefire test" duration-ms="316" started-at="2019-09-04T09:40:58Z" finished-at="2019-09-04T09:40:58Z">
       <class name="classes.TranslatorTest">
-        <test-method status="PASS" signature="testAge()[pri:0, instance:testAge(classes.TranslatorTest)]" name="testAge" duration-ms="64" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
+        <test-method status="PASS" signature="testAge()[pri:0, instance:testAge(classes.TranslatorTest)]" name="testAge" duration-ms="80" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAge -->
-        <test-method status="PASS" signature="testCalculateFortune()[pri:0, instance:testCalculateFortune(classes.TranslatorTest)]" name="testCalculateFortune" duration-ms="2" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
+        <test-method status="PASS" signature="testCalculateFortune()[pri:0, instance:testCalculateFortune(classes.TranslatorTest)]" name="testCalculateFortune" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateFortune -->
-        <test-method status="PASS" signature="testGetFortune()[pri:0, instance:testGetFortune(classes.TranslatorTest)]" name="testGetFortune" duration-ms="1" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
+        <test-method status="PASS" signature="testGetFortune()[pri:0, instance:testGetFortune(classes.TranslatorTest)]" name="testGetFortune" duration-ms="1" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetFortune -->
-        <test-method status="PASS" signature="testRandomNumber()[pri:0, instance:testRandomNumber(classes.TranslatorTest)]" name="testRandomNumber" duration-ms="1" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
+        <test-method status="PASS" signature="testRandomNumber()[pri:0, instance:testRandomNumber(classes.TranslatorTest)]" name="testRandomNumber" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandomNumber -->
-        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="1" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
+        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGender -->
       </class> <!-- classes.TranslatorTest -->
       <class name="classes.RandomFactorTest">
-        <test-method status="PASS" signature="testGetRandomNumber()[pri:0, instance:testGetRandomNumber(classes.RandomFactorTest)]" name="testGetRandomNumber" duration-ms="809" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:13:00Z">
+        <test-method status="PASS" signature="testGetRandomNumber()[pri:0, instance:testGetRandomNumber(classes.RandomFactorTest)]" name="testGetRandomNumber" duration-ms="14" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetRandomNumber -->

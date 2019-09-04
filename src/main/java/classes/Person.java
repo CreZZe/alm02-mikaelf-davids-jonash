@@ -17,7 +17,7 @@ import java.io.Serializable;
 @SessionScoped
 public class Person implements Serializable {
 
-    private RandomFactor r = new RandomFactor();
+    private final RandomFactor r = new RandomFactor();
     
     private String fullName;
     private String ethnicity;
