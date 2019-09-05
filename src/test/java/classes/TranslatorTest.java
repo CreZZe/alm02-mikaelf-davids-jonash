@@ -44,8 +44,11 @@ public class TranslatorTest {
     @Test
     public void testGetFortune() {
         System.out.println(p1.getR().getRandomNumber());
-        if (p1.getR().getRandomNumber() <= 5)
+        System.out.println(trans.getFortune());
+        
+        if (p1.getR().getRandomNumber() <= 5){
             assertEquals(trans.getFortune(), "Focus on your health and well-being now. It won't wait.");
+        }
         else
             assertEquals(trans.getFortune(), "Your home will be filled with peace and harmony.");
     }
@@ -56,7 +59,11 @@ public class TranslatorTest {
     @Test
     public void testCalculateFortune() {
         
-        assertTrue(trans.calculateFortune(p1));
+        if (p1.getR().getRandomNumber() <= 5){
+            assertEquals(trans.getFortune(), "Focus on your health and well-being now. It won't wait.");
+        }
+        else
+            assertEquals(trans.getFortune(), "Your home will be filled with peace and harmony.");
         
     }
 
