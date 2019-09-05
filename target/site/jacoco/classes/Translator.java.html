@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Translator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">alm02-mikaelf-davids-jonash</a> &gt; <a href="index.source.html" class="el_package">classes</a> &gt; <span class="el_source">Translator.java</span></div><h1>Translator.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package classes;
+
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
+import java.util.HashMap;
+
+/**
+ *
+ * @author powkn
+ */
+@Named(value = &quot;translator&quot;)
+@SessionScoped
+public class Translator implements Serializable {
+
+<span class="fc" id="L21">    HashMap&lt;String, String&gt; fortuneList = new HashMap&lt;&gt;();</span>
+    String fortune;
+    
+    /**
+     * Creates a new instance of Translator
+     */
+<span class="fc" id="L27">    public Translator() {</span>
+<span class="fc" id="L28">        fortuneList.put(&quot;1-5man0-20&quot;, &quot;You excel at pleasing others.&quot;);</span>
+<span class="fc" id="L29">        fortuneList.put(&quot;1-5man21-50&quot;, &quot;Focus on your health and well-being now. It won't wait.&quot;);</span>
+<span class="fc" id="L30">        fortuneList.put(&quot;1-5man51-&gt;&quot;, &quot;Be thankful, even if your life is not perfect.&quot;);</span>
+<span class="fc" id="L31">        fortuneList.put(&quot;1-5kvinna0-20&quot;, &quot;Open your mind and your heart to good things.&quot;);</span>
+<span class="fc" id="L32">        fortuneList.put(&quot;1-5kvinna21-50&quot;, &quot;Travel is in your future.&quot;);</span>
+<span class="fc" id="L33">        fortuneList.put(&quot;1-5kvinna51-&gt;&quot;, &quot;Worry does not beget change.&quot;);</span>
+
+<span class="fc" id="L35">        fortuneList.put(&quot;6-10man0-20&quot;, &quot;Go with your gut feeling.&quot;);</span>
+<span class="fc" id="L36">        fortuneList.put(&quot;6-10man21-50&quot;, &quot;Your home will be filled with peace and harmony.&quot;);</span>
+<span class="fc" id="L37">        fortuneList.put(&quot;6-10man51-&gt;&quot;, &quot;Get ready for a life-changing event!&quot;);</span>
+<span class="fc" id="L38">        fortuneList.put(&quot;6-10kvinna0-20&quot;, &quot;Everyone agrees you are the best.&quot;);</span>
+<span class="fc" id="L39">        fortuneList.put(&quot;6-10kvinna21-50&quot;, &quot;Your home will be filled with peace and harmony.&quot;);</span>
+<span class="fc" id="L40">        fortuneList.put(&quot;6-10kvinna51-100&quot;, &quot;Your smile lights up someone else's day.&quot;);</span>
+<span class="fc" id="L41">    }</span>
+
+    public String getFortune() {
+<span class="fc" id="L44">        return fortune;</span>
+    }
+    
+    private String getFortuneWithKey(String key) {
+<span class="fc" id="L48">        return fortuneList.get(key);</span>
+    }
+    
+    public void calculateFortune(Person person) {
+        String key;
+        
+<span class="fc" id="L54">        key = randomNumber(person.getR().getRandomNumber());</span>
+<span class="fc" id="L55">        key += gender(person.getGender());</span>
+<span class="fc" id="L56">        key += age(person.getBirthDate());</span>
+        
+<span class="fc" id="L58">        fortune = getFortuneWithKey(key);</span>
+       
+<span class="fc" id="L60">    }</span>
+    
+    public String randomNumber(int rand) {
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (rand &gt; 5) {</span>
+<span class="fc" id="L64">            return &quot;6-10&quot;;</span>
+        }
+        else {
+<span class="fc" id="L67">            return &quot;1-5&quot;;</span>
+        }        
+    }
+    
+    public String gender(String gender) {
+        String keyAppend;
+<span class="fc bfc" id="L73" title="All 10 branches covered.">        switch (gender) {</span>
+            case &quot;Man&quot;:
+<span class="fc" id="L75">                keyAppend = &quot;man&quot;;</span>
+<span class="fc" id="L76">                break;</span>
+            case &quot;Woman&quot;:
+<span class="fc" id="L78">                keyAppend = &quot;kvinna&quot;;</span>
+<span class="fc" id="L79">                break;</span>
+            default:
+<span class="fc" id="L81">                keyAppend = &quot;kvinna&quot;;</span>
+                break;
+        }
+        
+<span class="fc" id="L85">        return keyAppend;</span>
+    }
+    
+    public String age(String ageString) {
+<span class="fc" id="L89">        int age = Integer.parseInt(ageString);</span>
+        
+<span class="fc bfc" id="L91" title="All 4 branches covered.">        if (age &gt;= 0 &amp;&amp; age &lt;= 20)</span>
+<span class="fc" id="L92">            return &quot;0-20&quot;;</span>
+<span class="fc bfc" id="L93" title="All 4 branches covered.">        else if (age &gt;= 21 &amp;&amp; age &lt;= 50)</span>
+<span class="fc" id="L94">            return &quot;21-50&quot;;</span>
+        else
+<span class="fc" id="L96">            return &quot;51-&gt;&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

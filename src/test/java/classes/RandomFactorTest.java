@@ -39,8 +39,9 @@ public class RandomFactorTest {
      */
     @Test
     public void testGetRandomNumber() {
-        for (int i = 0; i < 10_000_000; i++)
+        for (int i = 0; i < 10_000_000; i++) {
+            assertNotNull(rf.createRandomNumber());
             assertTrue(rf.getRandomNumber() > 0 && rf.getRandomNumber() <= 10);
+        }
     }
-    
 }

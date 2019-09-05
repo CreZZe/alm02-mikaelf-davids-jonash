@@ -43,9 +43,6 @@ public class TranslatorTest {
      */
     @Test
     public void testGetFortune() {
-        System.out.println(p1.getR().getRandomNumber());
-        System.out.println(trans.getFortune());
-        
         if (p1.getR().getRandomNumber() <= 5){
             assertEquals(trans.getFortune(), "Focus on your health and well-being now. It won't wait.");
         }
@@ -87,7 +84,11 @@ public class TranslatorTest {
     public void testGender() {
         assertEquals(trans.gender("Man"), "man");
         assertEquals(trans.gender("Woman"), "kvinna");
-        assertEquals(trans.gender("Other"), "other");
+        
+        assertEquals(trans.gender("\0Man"), "kvinna");
+        assertEquals(trans.gender("\0Woman"), "kvinna");
+        
+        assertEquals(trans.gender(" "), "kvinna");
     }
 
     /**
@@ -96,17 +97,18 @@ public class TranslatorTest {
     @Test
     public void testAge() {
         int rand;
-        for (int i = 0; i < 100_000; i++) {
-            rand = random.nextInt();
+        
+        
+        for (int i = -200; i < 200; i++) {
             
-            if (rand >= 0 && rand <= 20) {
-                assertEquals(trans.age(String.valueOf(rand)), "0-20");
+            if (i >= 0 && i <= 20) {
+                assertEquals(trans.age(String.valueOf(i)), "0-20");
             }
-            else if (rand >= 21 && rand <= 50) {
-                assertEquals(trans.age(String.valueOf(rand)), "21-50");
+            else if (i >= 21 && i <= 50) {
+                assertEquals(trans.age(String.valueOf(i)), "21-50");
             }
             else {
-                assertEquals(trans.age(String.valueOf(rand)), "51->");
+                assertEquals(trans.age(String.valueOf(i)), "51->");
             }
         }
     }

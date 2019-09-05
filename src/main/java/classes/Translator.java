@@ -69,7 +69,7 @@ public class Translator implements Serializable {
     }
     
     public String gender(String gender) {
-        String keyAppend = "";
+        String keyAppend;
         switch (gender) {
             case "Man":
                 keyAppend = "man";
@@ -77,8 +77,8 @@ public class Translator implements Serializable {
             case "Woman":
                 keyAppend = "kvinna";
                 break;
-            case "Other":
-                keyAppend = "other";
+            default:
+                keyAppend = "kvinna";
                 break;
         }
         

@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="129" started-at="2019-09-03T11:13:28Z" finished-at="2019-09-03T11:13:28Z">
+  <suite name="Surefire suite" duration-ms="513" started-at="2019-09-05T09:15:06Z" finished-at="2019-09-05T09:15:07Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="129" started-at="2019-09-03T11:13:28Z" finished-at="2019-09-03T11:13:28Z">
+    <test name="Surefire test" duration-ms="513" started-at="2019-09-05T09:15:06Z" finished-at="2019-09-05T09:15:07Z">
+      <class name="classes.PersonTest">
+        <test-method status="PASS" signature="testGetNationality()[pri:0, instance:testGetNationality(classes.PersonTest)]" name="testGetNationality" duration-ms="1" started-at="2019-09-05T11:15:07Z" finished-at="2019-09-05T11:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetNationality -->
+        <test-method status="PASS" signature="testGetFullName()[pri:0, instance:testGetFullName(classes.PersonTest)]" name="testGetFullName" duration-ms="0" started-at="2019-09-05T11:15:07Z" finished-at="2019-09-05T11:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFullName -->
+        <test-method status="PASS" signature="testGetEthnicity()[pri:0, instance:testGetEthnicity(classes.PersonTest)]" name="testGetEthnicity" duration-ms="1" started-at="2019-09-05T11:15:07Z" finished-at="2019-09-05T11:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetEthnicity -->
+        <test-method status="PASS" signature="testGetBirthDate()[pri:0, instance:testGetBirthDate(classes.PersonTest)]" name="testGetBirthDate" duration-ms="0" started-at="2019-09-05T11:15:07Z" finished-at="2019-09-05T11:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBirthDate -->
+        <test-method status="PASS" signature="testGetGender()[pri:0, instance:testGetGender(classes.PersonTest)]" name="testGetGender" duration-ms="0" started-at="2019-09-05T11:15:07Z" finished-at="2019-09-05T11:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetGender -->
+      </class> <!-- classes.PersonTest -->
       <class name="classes.TranslatorTest">
-        <test-method status="PASS" signature="testAge()[pri:0, instance:testAge(classes.TranslatorTest)]" name="testAge" duration-ms="30" started-at="2019-09-03T13:13:28Z" finished-at="2019-09-03T13:13:28Z">
+        <test-method status="PASS" signature="testAge()[pri:0, instance:testAge(classes.TranslatorTest)]" name="testAge" duration-ms="12" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAge -->
-        <test-method status="PASS" signature="testGetFortune()[pri:0, instance:testGetFortune(classes.TranslatorTest)]" name="testGetFortune" duration-ms="1" started-at="2019-09-03T13:13:28Z" finished-at="2019-09-03T13:13:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetFortune -->
-        <test-method status="PASS" signature="testCalculateFortune()[pri:0, instance:testCalculateFortune(classes.TranslatorTest)]" name="testCalculateFortune" duration-ms="0" started-at="2019-09-03T13:13:28Z" finished-at="2019-09-03T13:13:28Z">
+        <test-method status="PASS" signature="testCalculateFortune()[pri:0, instance:testCalculateFortune(classes.TranslatorTest)]" name="testCalculateFortune" duration-ms="0" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateFortune -->
-        <test-method status="PASS" signature="testRandomNumber()[pri:0, instance:testRandomNumber(classes.TranslatorTest)]" name="testRandomNumber" duration-ms="0" started-at="2019-09-03T13:13:28Z" finished-at="2019-09-03T13:13:28Z">
+        <test-method status="PASS" signature="testRandomNumber()[pri:0, instance:testRandomNumber(classes.TranslatorTest)]" name="testRandomNumber" duration-ms="1" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandomNumber -->
-        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="0" started-at="2019-09-03T13:13:28Z" finished-at="2019-09-03T13:13:28Z">
-=======
-<testng-results skipped="0" failed="0" total="6" passed="6">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Surefire suite" duration-ms="316" started-at="2019-09-04T09:40:58Z" finished-at="2019-09-04T09:40:58Z">
-    <groups>
-    </groups>
-    <test name="Surefire test" duration-ms="316" started-at="2019-09-04T09:40:58Z" finished-at="2019-09-04T09:40:58Z">
-      <class name="classes.TranslatorTest">
-        <test-method status="PASS" signature="testAge()[pri:0, instance:testAge(classes.TranslatorTest)]" name="testAge" duration-ms="80" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAge -->
-        <test-method status="PASS" signature="testCalculateFortune()[pri:0, instance:testCalculateFortune(classes.TranslatorTest)]" name="testCalculateFortune" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateFortune -->
-        <test-method status="PASS" signature="testGetFortune()[pri:0, instance:testGetFortune(classes.TranslatorTest)]" name="testGetFortune" duration-ms="1" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
+        <test-method status="PASS" signature="testGetFortune()[pri:0, instance:testGetFortune(classes.TranslatorTest)]" name="testGetFortune" duration-ms="0" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetFortune -->
-        <test-method status="PASS" signature="testRandomNumber()[pri:0, instance:testRandomNumber(classes.TranslatorTest)]" name="testRandomNumber" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRandomNumber -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="1" started-at="2019-09-03T13:12:59Z" finished-at="2019-09-03T13:12:59Z">
->>>>>>> cd3375b1e2e94d4c843957bd12359a63a46cf951
-=======
-        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="0" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
->>>>>>> a8ac98ee6f26e778d75c73d22e27a6c9e5b3f6a7
+        <test-method status="PASS" signature="testGender()[pri:0, instance:testGender(classes.TranslatorTest)]" name="testGender" duration-ms="0" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGender -->
       </class> <!-- classes.TranslatorTest -->
-<<<<<<< HEAD
-=======
       <class name="classes.RandomFactorTest">
-        <test-method status="PASS" signature="testGetRandomNumber()[pri:0, instance:testGetRandomNumber(classes.RandomFactorTest)]" name="testGetRandomNumber" duration-ms="14" started-at="2019-09-04T11:40:58Z" finished-at="2019-09-04T11:40:58Z">
+        <test-method status="PASS" signature="testGetRandomNumber()[pri:0, instance:testGetRandomNumber(classes.RandomFactorTest)]" name="testGetRandomNumber" duration-ms="309" started-at="2019-09-05T11:15:06Z" finished-at="2019-09-05T11:15:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetRandomNumber -->
       </class> <!-- classes.RandomFactorTest -->
->>>>>>> cd3375b1e2e94d4c843957bd12359a63a46cf951
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
