@@ -34,7 +34,7 @@ pipeline {
             agent any
             steps{
                 sh 'export PATH=/opt/glassfish-4.1.1/bin/asadmin:$PATH'
-                sh 'asadmin --port 4848 deploy --force --name mikaelfdavidsjonash-${DEPLOY_ENV} --contextroot mikaelfdavidsjonash-${DEPLOY_ENV} target/calc-jsf-1.0.war'
+                sh 'asadmin --port 4848 deploy --force --name mikaelfdavidsjonash-${DEPLOY_ENV} --contextroot mikaelfdavidsjonash-${DEPLOY_ENV} target/alm02-mikaelf-davids-jonash-1.0-SNAPSHOT.war'
             }
         } 
     }
